@@ -6,14 +6,14 @@ pipeline {
         jdk 'jdk8'
     }
     
-	options {
+    options {
     	buildDiscarder(logRotator(numToKeepStr: '5'))
-  	}
+    }
     
     environment {
     	groupId = readMavenPom().getGroupId()
-	    artifactId = readMavenPom().getArtifactId()
-	    version = readMavenPom().getVersion()
+	artifactId = readMavenPom().getArtifactId()
+	version = readMavenPom().getVersion()
     }
     
     stages {

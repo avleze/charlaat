@@ -34,7 +34,9 @@ pipeline {
 
         stage ('Delivery') {
             steps {
-                sh 'mvn -DskipTests=true deploy' 
+		sh '''
+                        echo "Dejando JAR"
+                '''
             }
         }
 
